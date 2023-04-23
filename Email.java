@@ -7,14 +7,8 @@ public class Email {
 	private String passwort ,abteilung ,alternativeEmail;
 	private String email;
 	private int mailboxKapazitaet;
-	
+
 	// Konstruktor zur Aufnahme des Vor- und Nachnamens
-	
-	// Fragen nach der Abteilung
-	
-	// Ein zufälliges Passwort generieren
-	
-	
 	public Email(String vorName, String nachName) {
 		this.vorName = vorName;
 		this.nachName  = nachName;
@@ -33,7 +27,7 @@ public class Email {
 		//System.out.println("Ihre Email: " + email);	
 		
 	}
-	
+	// Fragen nach der Abteilung
 	private String setabteilung() {
 		System.out.print("Geben Sie Ihre Abteilung ein :" + "\n1 fuer Vertrieb\n2 fuer Entwicklung\n3 fuer Rechnungswesen\n0 fuer keine\nCode:");
 		Scanner eingabe = new Scanner(System.in);
@@ -43,7 +37,7 @@ public class Email {
 		else if (abteilungNum == 3) {return "Rechnungsewesen";}
 		else {return " ";}
 	}
-	
+	// Ein zufälliges Passwort generieren
 	private String getpasswort(int length) {
 		String passwortset = "ABCDEFGHIJKLNMOPQRSTUVWXYZ#$%^*@";
 		char[] passwort = new char[length];
